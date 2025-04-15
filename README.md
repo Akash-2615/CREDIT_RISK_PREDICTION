@@ -1,111 +1,108 @@
-# 💳 AI-Driven Credit Scoring System
+# 🧐 AI-Driven Credit Scoring System
 
-An intelligent credit scoring system designed for **real-time loan eligibility predictions** and **financial insights**. It leverages modern machine learning and explainability techniques to assist lenders in making informed decisions, reduce loan default risk, and provide transparency to users.
+A real-time credit scoring and loan prediction platform that leverages machine learning to assess loan eligibility and offer financial insights. Designed to enhance financial decision-making and reduce loan default rates using explainable AI.
 
 ---
 
 ## 🚀 Features
 
-- 🔍 **Real-time loan predictions** using a trained machine learning model  
-- 📊 **Explainable AI** via SHAP and LIME for transparent decision-making  
-- 📈 **Financial insights** provided to 500+ users  
-- 🛡️ **15% reduction** in loan default rates through better risk assessment  
-- ⚡️ **FastAPI** backend for high-performance inference  
-- 💽 **Streamlit** dashboard for interactive visualization and user input  
+- Real-time loan eligibility prediction
+- Financial insight generation using SHAP & LIME explainability
+- FastAPI backend for ML inference
+- Streamlit dashboard for user interaction
+- 500+ users served with a 15% reduction in loan default rate
 
 ---
 
-## 💪 Tech Stack
+## 🧰 Tech Stack
 
-- **Python**
-- **FastAPI** – lightweight and fast web framework for model deployment  
-- **Streamlit** – for real-time user interaction and data visualization  
-- **SHAP & LIME** – to explain ML model decisions  
-- **scikit-learn / XGBoost / LightGBM** – for model development
+- **Backend**: Python, FastAPI
+- **Frontend**: Streamlit
+- **Explainability**: SHAP, LIME
+- **ML Model**: Scikit-learn
+- **Data**: `credit_score.csv`, `processed_credit_data.csv`, `processed_credit_data_with_score.csv`
 
 ---
 
 ## 📁 Project Structure
 
 ```
-credit-scoring-system/
-│
-├── api/                    # FastAPI backend
-│   └── main.py             # Prediction endpoints
-│
-├── dashboard/              # Streamlit frontend
-│   └── app.py              # UI and user interaction
-│
-├── models/                 # Saved ML models
-│   └── credit_model.pkl
-│
-├── explainer/              # SHAP and LIME explainers
-│   ├── shap_utils.py
-│   └── lime_utils.py
-│
-├── data/                   # Sample datasets
-│
-├── utils/                  # Helper functions
-│
-└── README.md
+├── app.py                            # Streamlit app for UI
+├── appp.py                           # Alternative or legacy Streamlit UI (consider merging)
+├── credit_score.csv                  # Original dataset
+├── credit_score_model.pkl            # Trained ML model
+├── main.ipynb                        # Initial notebook for EDA and modeling
+├── main2.ipynb                       # Advanced modeling or pipeline building
+├── model.ipynb                       # Final model development and evaluation
+├── processed_credit_data.csv         # Cleaned/preprocessed data
+├── processed_credit_data_with_score.csv  # Scored data with credit risk output
+├── sample.py                         # Sample script (API test or demo)
 ```
 
 ---
 
-## 📦 Installation
+## 🧪 How to Run the Project
 
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/yourusername/credit-scoring-system.git
-   cd credit-scoring-system
-   ```
+### 1. Clone the repo
 
-2. **Create virtual environment & install dependencies:**
-   ```bash
-   python -m venv venv
-   source venv/bin/activate   # On Windows: venv\Scripts\activate
-   pip install -r requirements.txt
-   ```
-
----
-
-## 🧐 Run the Application
-
-### 🔌 Start the FastAPI backend:
 ```bash
-cd api
-uvicorn main:app --reload
+git clone https://github.com/yourusername/credit-scoring-system.git
+cd credit-scoring-system
 ```
 
-### 💽 Launch the Streamlit dashboard:
+### 2. Install dependencies
+
 ```bash
-cd dashboard
+pip install -r requirements.txt
+```
+
+### 3. Run the Streamlit app
+
+```bash
 streamlit run app.py
 ```
 
----
+### 4. (Optional) Run the FastAPI backend
 
-## 🧪 Model Insights & Explainability
-
-- **SHAP:** Visualizes feature impact at both global and individual levels.
-- **LIME:** Provides instance-level explanations for why a prediction was made.
-
-These tools help both end-users and auditors understand the “why” behind each loan decision.
+```bash
+uvicorn sample:app --reload
+```
 
 ---
 
-## 📊 Results
+## 📊 Model Performance
 
-- **500+ users served**
-- **92% prediction accuracy**
-- **15% reduction in default rate**
-- **Real-time explainable decision making**
+- **Model Used**: Gradient Boosting Classifier / Random Forest (customizable)
+- **Test Accuracy**: ~92%
+- **SSIM Equivalent for tabular:** 15% improvement in loan default rate
+- **XAI**: SHAP and LIME provide interpretation of model decisions
 
 ---
 
-## 📢 Contact
+## 🧠 Explainability
 
-**Author:** Akash  
-**Email:** [akash2612005@gmail.com]  
-**LinkedIn:** [linkedin.com/in/yourprofile](https://www.linkedin.com/in/akash-s-778194275/)
+We use:
+- **SHAP (SHapley Additive exPlanations)** for global + local model explainability
+- **LIME (Local Interpretable Model-agnostic Explanations)** to break down single predictions
+
+---
+
+## 📌 Future Work
+
+- Integrate credit bureau APIs for real-time data
+- Add risk profiling & fraud detection modules
+- Deploy with Docker or Kubernetes
+- Host on AWS/GCP with CI/CD
+
+---
+
+## 🧑‍💻 Author
+
+**Akash** – [LinkedIn](https://www.linkedin.com/in/akash-s-778194275/) | [GitHub](https://github.com/Akash-2615) | [E-mail](akash2612005@gmail.com)
+
+---
+
+## 📜 License
+
+This project is licensed under the MIT License. See `LICENSE` for details.
 
