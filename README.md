@@ -106,6 +106,6 @@ These tools help both end-users and auditors understand the “why” behind eac
 ## 📢 Contact
 
 **Author:** Akash  
-**Email:** [your-email@example.com]  
-**LinkedIn:** [linkedin.com/in/yourprofile](https://linkedin.com/in/yourprofile)
+**Email:** [akash2612005@gmail.com]  
+**LinkedIn:** [linkedin.com/in/yourprofile](https://www.linkedin.com/in/akash-s-778194275/)
 
